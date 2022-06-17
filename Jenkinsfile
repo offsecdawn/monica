@@ -18,6 +18,7 @@ pipeline {
         steps {
           //sh 'pip3 install semgrep'
           sh 'python3 -V'
+          sh 'pip3 install semgrep'
           //sh 'semgrep ci --config auto'
       }
     }
