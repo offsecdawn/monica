@@ -20,8 +20,9 @@ pipeline {
           //sh 'python3 -V'
           //sh 'pip3 install semgrep'
           //sh 'semgrep ci --config auto'
+          sh 'rm -rf $HOME/monica'
           sh 'cd $HOME && git clone https://github.com/offsecdawn/monica.git && cd monica && git clone https://github.com/returntocorp/semgrep-rules.git && docker run --rm -v "${PWD}:/src" returntocorp/semgrep semgrep --config "/src/semgrep-rules/php"'
-          sh 'rm -r $HOME/monica'
+         
       }
     }
   }
