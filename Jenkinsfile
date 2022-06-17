@@ -16,8 +16,9 @@ pipeline {
     stages {
       stage('Semgrep-Scan') {
         steps {
-          sh 'brew install semgrep'
-          sh 'semgrep ci --config auto'
+          //sh 'pip3 install semgrep'
+          sh 'python3 -version'
+          //sh 'semgrep ci --config auto'
       }
     }
   }
