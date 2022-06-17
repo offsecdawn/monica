@@ -16,8 +16,8 @@ pipeline {
     stages {
       stage('Semgrep-Scan') {
         steps {
-          sh 'echo "Hello world"'
-          //sh 'semgrep ci --config auto'
+          sh 'brew install semgrep'
+          sh 'semgrep ci --config auto'
       }
     }
   }
