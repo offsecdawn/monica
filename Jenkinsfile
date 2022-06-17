@@ -17,9 +17,10 @@ pipeline {
       stage('Semgrep-Scan') {
         steps {
           //sh 'pip3 install semgrep'
-          sh 'python3 -V'
-          sh 'pip3 install semgrep'
+          //sh 'python3 -V'
+          //sh 'pip3 install semgrep'
           //sh 'semgrep ci --config auto'
+          sh 'docker run --rm returntocorp/semgrep semgrep --config=auto'
       }
     }
   }
