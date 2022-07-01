@@ -8,11 +8,11 @@ pipeline {
         // }
         stage('build && SonarQube analysis') {
             steps {
-                script
-		        {
-                    //requires SonarQube Scanner 2.8+
-                    scannerHome = tool 'SonarQubeScanner_2.8'
-		        }
+                // script
+		        // {
+                //     //requires SonarQube Scanner 2.8+
+                //     scannerHome = tool 'SonarQubeScanner_2.8'
+		        // }
                 withSonarQubeEnv('My SonarQube Server') {
                     // // Optionally use a Maven environment you've configured already
                     // withMaven(maven:'Maven 3.5') {
