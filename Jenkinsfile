@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent any
     // environment {
       // SEMGREP_BASELINE_REF = "main"
 
@@ -15,10 +15,10 @@ pipeline {
     // }
     stages{
         stage('SonarQube Analysis')
-      {
-        agent{
-          label 'main'
-        }
+      // {
+      //   agent{
+      //     label 'main'
+      //   }
         steps
         {
           script
