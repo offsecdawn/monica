@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('SCM') {
-            steps {
-                git url: 'https://github.com/offsecdawn/monica.git'
-            }
-        }
+        // stage('SCM') {
+        //     steps {
+        //         git url: 'https://github.com/offsecdawn/monica.git'
+        //     }
+        // }
         stage('build && SonarQube analysis') {
             steps {
                 script
