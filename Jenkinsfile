@@ -13,7 +13,7 @@ pipeline .
             {
             script
             {
-                scannerHome = tool 'SonarQubeScanner_4.7.0.2747'
+                scannerHome = tool 'SonarQubeScanner_2.8'
             }
             withSonarQubeEnv('SonarQube') // the SonarQube server name comes from jenkins->manage jenkins-> sonarQube servers
             {
