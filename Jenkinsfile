@@ -11,7 +11,7 @@ pipeline {
                 script
 		        {
                     //requires SonarQube Scanner 2.8+
-                    scannerHome = tool 'SonarQube Scanner 2.8'
+                    scannerHome = tool 'SonarQubeScanner_2.8'
 		        }
                 withSonarQubeEnv('My SonarQube Server') {
                     // // Optionally use a Maven environment you've configured already
