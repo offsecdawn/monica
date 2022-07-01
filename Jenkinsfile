@@ -13,23 +13,26 @@ pipeline {
 
       // SEMGREP_TIMEOUT = "300"
     // }
-    stage('SonarQube Analysis')
-    {
-      agent{
-        label 'master'
-      }
-      steps
+    stages{
+        stage('SonarQube Analysis')
       {
-        script
-        {
-          scannerHome = tool 'SonarQubeScanner_4.7.0.2747'
+        agent{
+          label 'master'
         }
-        withSonarQubeEnv('SonarQube') // the SonarQube server name comes from jenkins->manage jenkins-> sonarQube servers
-		    {
-			    sh "${scannerHome}/bin/sonar-scanner"
-		    }
+        steps
+        {
+          script
+          {
+            scannerHome = tool 'SonarQubeScanner_4.7.0.2747'
+          }
+          withSonarQubeEnv('SonarQube') // the SonarQube server name comes from jenkins->manage jenkins-> sonarQube servers
+          {
+            sh "${scannerHome}/bin/sonar-scanner"
+          }
+        }
       }
     }
+    
   //   stages {
   //     stage('Semgrep-Scan') {
   //       steps {
