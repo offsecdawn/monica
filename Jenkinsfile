@@ -19,7 +19,7 @@ pipeline
                 sh 'pip3 install semgrep'
                 // sh 'semgrep ci' 
                 // /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
-                sh 'PATH="/home/ubuntu/.local/bin/semgrep:$PATH"'
+                sh 'export PATH="/home/ubuntu/.local/bin/semgrep:$PATH"'
                 sh 'echo $PATH'
             }
         }
