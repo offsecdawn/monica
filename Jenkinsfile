@@ -18,7 +18,7 @@ pipeline
             {
                 // sh 'pip3 install semgrep'
                 // sh 'semgrep ci' 
-                sh 'pip3 --help'
+                sh 'semgrep --help'
             }
         }
         // stage('build && SonarQube analysis') 
