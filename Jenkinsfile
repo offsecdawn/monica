@@ -16,6 +16,7 @@ pipeline
         {
             steps 
             {
+                sh 'pip3 install semgrep'
                 sh 'semgrep ci' 
             }
         }
