@@ -18,7 +18,7 @@ pipeline
 		        script
 		        {
 			        //requires SonarQube Scanner 2.8+
-			        scannerHome = tool 'SonarQubeScanner_2.8'
+			        scannerHome = tool 'SonarQubeScanner_4.7'
 		        }       
 		        withSonarQubeEnv('SonarQube') // the SonarQube server name comes from jenkins->manage jenkins-> sonarQube servers
 		        {
