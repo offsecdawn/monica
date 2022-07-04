@@ -16,8 +16,8 @@ pipeline
         {
             steps 
             {
-                sh 'pip3 install semgrep'
-                sh 'semgrep ci' 
+                // sh 'pip3 install semgrep'
+                sh '/home/ubuntu/.local/bin/semgrep ci' 
             }
         }
         // stage('build && SonarQube analysis') 
