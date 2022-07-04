@@ -19,8 +19,8 @@ pipeline
                 sh 'pip3 install semgrep'
                 // sh 'semgrep ci' 
                 // /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
-                sh 'export PATH="/home/ubuntu/.local/bin/semgrep:$PATH"'
-                sh 'echo $PATH'
+                sh 'semgrep -h'
+
             }
         }
         // stage('build && SonarQube analysis') 
