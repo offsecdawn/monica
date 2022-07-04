@@ -22,7 +22,7 @@ pipeline
 		        }       
 		        withSonarQubeEnv('SonarQube') // the SonarQube server name comes from jenkins->manage jenkins-> sonarQube servers
 		        {
-		        	sh "${scannerHome}/bin/sonar-scanner"
+		        	sh "${scannerHome}/bin/sonar-scanner -X"
 		        }
 	        } 
 
