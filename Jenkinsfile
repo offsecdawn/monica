@@ -3,7 +3,7 @@ pipeline
     agent any
     environment 
     {
-      SEMGREP_APP_TOKEN = "ba4673a7f62a1cd1f66812dd49acca3015d2bc9ff6ab4b4f03363a164f4869c4"
+      SEMGREP_APP_TOKEN = ""
       SEMGREP_REPO_URL = env.GIT_URL.replaceFirst(/^(.*).git$/,'$1')
       SEMGREP_BRANCH = "${GIT_BRANCH}"
       SEMGREP_JOB_URL = "${BUILD_URL}"
