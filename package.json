@@ -70,7 +70,7 @@
     "laravel-mix": "^6.0",
     "laravel-mix-purgecss": "^6.0",
     "list.js": "^2.3",
-    "lodash": "^4.17",
+    "lodash": "^4.17.23",
     "marked": "^2.0",
     "moment": "^2.26",
     "moment-timezone": "^0.5",
